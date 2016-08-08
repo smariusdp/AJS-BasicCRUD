@@ -1,0 +1,8 @@
+CREATE TABLE books(
+	pk SERIAL PRIMARY KEY,
+	callNo VARCHAR NOT NULL,
+	title TEXT NOT NULL,
+	author VARCHAR NOT NULL,
+	subject TEXT NOT NULL,
+	cover VARCHAR NULL
+);

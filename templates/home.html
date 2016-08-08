@@ -1,0 +1,57 @@
+<div>
+	<h2>Book Form</h2>
+	
+	<table>
+		<tr>
+			<td>Call No.</td>
+			<td>
+				<input type="text" ng-model="form.callNo" />
+			</td>
+		</tr>
+		<tr>
+			<td>Title</td>
+			<td>
+				<input type="text" ng-model="form.title" />
+			</td>
+		</tr>
+		<tr>
+			<td>Authors</td>
+			<td>
+				<input type="text" ng-model="form.author" />
+			</td>
+		</tr>
+		<tr>
+			<td>Subjects</td>
+			<td>
+				<input type="text" ng-model="form.subject" />
+			</td>
+		</tr>
+		<tr>
+			<td>Cover</td>
+			<td>
+				<input type="text" ng-model="form.cover" />
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="button" value="SAVE" ng-click="save()"/>
+			</td>
+		</tr>
+	</table>
+<div style ="margin-left:700px;margin-top:-200px;">
+	<h2>Bookshelf</h2>
+	<table cellspacing="1" style="border: 1px solid #CCC;">
+		<tr ng-repeat="(key,value) in books track by $index">
+			<td>{{ value.profile }}</td>
+			<!-- <td>{{ value.callNo }}</td>
+			<td>{{ value.title }}</td>
+			<td>{{ value.author }}</td>
+			<td>{{ value.subject }}</td>
+			<td>{{ value.cover }}</td>
+			<td>{{ value.pk }}</td> -->
+			<td><a href='#/edit/{{value.pk}}'>Edit</a></td>
+		</tr>
+	</table>
+	</div>
+</div>
